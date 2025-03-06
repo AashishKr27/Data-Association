@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="w-full h-screen bg-[#020617] text-white">
+        <div class="flex flex-col gap-4 justify-center items-center h-full">
+            <h2 class="text-3xl">Create User</h2>
+            <form class="flex w-full flex-col gap-3 justify-center items-center" action="/register" method="post">
+                <input class="w-[300px] border border-white px-3 rounded-md outline-none py-2" type="text"
+                    placeholder="Enter Username" name="username">
+                <input class="w-[300px] border border-white px-3 rounded-md outline-none py-2" type="text"
+                    placeholder="Enter Name" name="name">
+                <input class="w-[300px] border border-white px-3 rounded-md outline-none py-2" type="number"
+                    placeholder="Enter Age" name="age">
+                <input class="w-[300px] border border-white px-3 rounded-md outline-none py-2" type="email"
+                    placeholder="Enter Email" name="email">
+                <input class="w-[300px] border border-white px-3 rounded-md outline-none py-2" type="password"
+                    placeholder="Enter Password" name="password">
+                <div w-[300px] class="flex items-center">
+                    <input
+                    class="w-[100px] bg-gradient-to-r from-cyan-400 px-3 py-1.5 cursor-pointer rounded-md to-blue-600"
+                    type="submit" value="Submit">
+                    <a class="w-[200px] text-sky-500 underline text-right" href="/login">Already Have Account?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
