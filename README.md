@@ -41,17 +41,14 @@ Ensure you have the following installed on your system:
    ```
 2. Install dependencies:
    ```bash
-   npm install
+   npm init -y
+   npm i ejs express mongoose bcrypt cookie-parser jsonwebtoken
    ```
-3. Start the MongoDB server (if not running):
+3. Run the application:
    ```bash
-   mongod
+   npx nodemon app.js
    ```
-4. Run the application:
-   ```bash
-   node app.js
-   ```
-5. Open the browser and visit:
+4. Open the browser and visit:
    ```
    http://localhost:3000
    ```
