@@ -11,15 +11,25 @@
 <body>
     <div class="w-full overflow-auto h-full bg-[#020617] text-white">
         <div class="w-full h-screen bg-[#020617] text-white">
-            <div class="w-full flex p-5 justify-end">
-                <a class="hover:from-red-500 hover:to-red-700 cursor-pointer text-center rounded-md px-3 py-2 w-[100px] py-2 bg-gradient-to-r      from-red-700 to-red-500"
+            <div class="w-full flex p-5 justify-between">
+                <div class="flex justify-center w-[10rem] items-center">
+                    <a href="/profile/upload" class="text-xl w-full cursor-pointer text-center rounded-md px-3 py-2">Profile Pic ✏️</a>
+                </div>
+                <a class="hover:from-red-500 hover:to-red-700 cursor-pointer text-center rounded-md px-3 py-2 w-[100px] py-2 bg-gradient-to-r from-red-700 to-red-500"
                     href="/logout">Logout</a>
             </div>
             <hr>
-            <div class="flex p-10 flex-col gap-5">
+            <div class="flex p-6 sm:p-10 flex-col gap-5">
                 <div class="flex flex-col gap-2">
-                    <h2 class="text-3xl">Hello, <%= user.name %>
-                    </h2>
+                    <div class="flex flex-row gap-3">
+                        <div class="rounded-full overflow-hidden sm:w-20 sm:h-20 w-14 h-14">
+                            <img class="w-full h-full object-cover" src="/images/uploads/<%= user.profilepic %>" alt="">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h2 class="md:text-3xl text-lg">Hello, <%= user.firstname %> 👋
+                            </h2>
+                        </div>
+                    </div>
                     <h5 class="">You can create a new post...</h5>
                 </div>
                 <form action="/post" class="flex flex-col gap-3" method="post">
@@ -28,6 +38,7 @@
                         name="content"></textarea>
                     <input type="submit" value="Create Post"
                         class="px-3 cursor-pointer text-sm rounded-lg px-3 py-2 w-[100px] py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-600 hover:to-yellow-400" />
+                    
                 </form>
                 <div class="flex flex-col w-full gap-3">
                     <h3 class="text-2xl text-zinc-400">Your Posts</h3>
